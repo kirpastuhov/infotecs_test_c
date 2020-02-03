@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "../includes/server.h"
 
 
@@ -15,15 +13,13 @@
 //             "DNT: 1\r\n"
 //             "Accept-Encoding: gzip, deflate\r\n"
 //             "\r\n"
-//             "Usually GET requests don\'t have a body\r\n"
-//             "But I don\'t care in this case :)";
-//     struct Request *req = parse_request(raw_request);
+//     t_request *req = parse_request(raw_request);
 //     if (req) {
 //         printf("Method: %d\n", req->method);
 //         printf("Request-URI: %s\n", req->url);
 //         printf("HTTP-Version: %s\n", req->version);
 //         puts("Headers:");
-//         struct Header *h;
+//         t_header *h;
 //         for (h=req->headers; h; h=h->next) {
 //             printf("%32s: %s\n", h->name, h->value);
 //         }

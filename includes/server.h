@@ -15,9 +15,7 @@
 # include <pthread.h>
 # include <sys/types.h>
 
-
 #define PORT 8000
-
 
 # define POST 1
 # define UNSUPPORTED 2
@@ -26,7 +24,6 @@
 # define SHA512 1
 # define GOST 2
 # define FINAL 4
-
 
 typedef struct      s_header 
 {

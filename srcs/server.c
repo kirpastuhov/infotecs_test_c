@@ -57,7 +57,7 @@ static void *socket_thread(void *arg)
     pthread_exit(NULL);
 }
 
-int main()
+int         main(void)
 {
     int32_t             server_fd;
     int32_t             new_socket;

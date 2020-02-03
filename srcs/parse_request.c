@@ -1,6 +1,6 @@
 #include "../includes/server.h"
 
-t_request *parse_request(const char *raw) 
+t_request   *parse_request(const char *raw) 
 {
     t_request *req = NULL;
     req = ft_memalloc(sizeof(t_request));
@@ -87,7 +87,7 @@ t_request *parse_request(const char *raw)
 }
 
 
-void free_header(t_header *h)
+void        free_header(t_header *h)
 {
     if (h)
     {
@@ -98,7 +98,7 @@ void free_header(t_header *h)
     }
 }
 
-void free_request(t_request *req) {
+void        free_request(t_request *req) {
     free(req->url);
     free(req->version);
     free_header(req->headers);
