@@ -2,9 +2,9 @@
 
 static void ft_form_hash(char **result, unsigned char hash)
 {
-    size_t size;
-    char *buf;
-    char *temp;
+    size_t  size;
+    char    *buf;
+    char    *temp;
 
     size = snprintf(NULL, 0, "%.2x", hash);
     buf = ft_strnew(size);
@@ -52,10 +52,10 @@ static void ft_form_result(char **result, uint8_t algo)
 
 static char *ft_sha512(char *data)
 {
-    uint32_t i;
-    MHASH td;
-    unsigned char hash[mhash_get_block_size(MHASH_SHA512)];
-    char *result;
+    uint32_t        i;
+    MHASH           td;
+    unsigned char   hash[mhash_get_block_size(MHASH_SHA512)];
+    char            *result;
 
     td = mhash_init(MHASH_SHA512);
     result = ft_strnew(1);
@@ -110,13 +110,5 @@ char *hashes(char *data)
     ft_form_result(&result, FINAL);
     return (result);
 }
-
-// int main(void)
-// {
-//     char *res = hashes("abc");
-
-//     printf("%s", res);
-//     return (0);
-// }
 
 // curl -X POST -H 'Content-type: application/json' --data '{"data":"abc"}' 'localhost:8000/hashes'
