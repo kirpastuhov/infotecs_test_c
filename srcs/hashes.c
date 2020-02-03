@@ -75,10 +75,10 @@ static char *ft_sha512(char *data)
 
 static char *ft_gost(char *data)
 {
-    uint32_t i;
-    MHASH td;
-    unsigned char hash[mhash_get_block_size(MHASH_GOST)];
-    char *result;
+    uint32_t        i;
+    MHASH           td;
+    unsigned char   hash[mhash_get_block_size(MHASH_GOST)];
+    char            *result;
 
     td = mhash_init(MHASH_GOST);
     result = ft_strnew(1);
@@ -96,7 +96,7 @@ static char *ft_gost(char *data)
     return (result);
 }
 
-char *hashes(char *data)
+char        *hashes(char *data)
 {
     char *result;
     char *sha512;

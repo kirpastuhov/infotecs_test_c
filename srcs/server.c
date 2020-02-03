@@ -2,7 +2,7 @@
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
-static void error(int new_socket, char *reason)
+static void error(int32_t new_socket, char *reason)
 {
     char *headers;
 
